@@ -1,6 +1,6 @@
 # Compiling the Gem
 # gem build aqueduct-ftp.gemspec
-# gem install ./aqueduct-ftp-x.x.x.gem
+# gem install ./aqueduct-ftp-x.x.x.gem --no-ri --no-rdoc --local
 #
 # gem push aqueduct-ftp-x.x.x.gem
 # gem list -r aqueduct-ftp
@@ -20,8 +20,9 @@ Gem::Specification.new do |s|
   s.homepage    = "https://github.com/remomueller"
   s.summary     = "Serve files using FTP through Aqueduct"
   s.description = "Connects to files through FTP using Aqueduct"
+  s.license     = 'CC BY-NC-SA 3.0'
 
-  s.files = Dir["{app,config,db,lib}/**/*"] + ["aqueduct-ftp.gemspec", "CHANGELOG.rdoc", "LICENSE", "Rakefile", "README.rdoc"]
+  s.files = Dir["{app,config,db,lib}/**/*"] + ["aqueduct-ftp.gemspec", "CHANGELOG.md", "LICENSE", "Rakefile", "README.md"]
   s.test_files = Dir["test/**/*"]
 
   s.add_dependency "rails", "~> 3.2.1"
